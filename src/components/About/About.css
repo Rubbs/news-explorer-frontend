@@ -1,0 +1,21 @@
+.about {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.about__content {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.about__title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about__text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
