@@ -4,21 +4,127 @@
   padding: 40px 0;
 }
 
-.search__form {
-  display: flex;
-  gap: 12px;
+.search__container {
   width: 100%;
-  max-width: 600px;
+  max-width: 608px;
 }
 
+.search__form {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  max-width: 608px;
+  height: 64px;
+
+  background-color: #ffffff;
+  border-radius: 100px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+/* SEARCH INPUT */
 .search__input {
   flex: 1;
-  padding: 12px;
+  height: 100%;
+  min-height: 64px;
+
+  border: none;
+  outline: none;
+
+  padding: 0 24px;
+
   font-size: 16px;
+
+  color: rgba(26, 27, 34, 1);
+  background: transparent;
+}
+
+.search__input::placeholder {
+  color: rgba(182, 188, 191, 1);
 }
 
 .search__button {
-  padding: 12px 20px;
-  font-size: 16px;
+  width: 168px;
+  height: 64px;
+  padding: 0;
+  border: none;
+  border-radius: 100px;
+
+  background: linear-gradient(180deg, #347eff 0%, #2f71e5 100%);
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 500;
+
   cursor: pointer;
+}
+
+.search__button:hover {
+  opacity: 0.9;
+}
+
+.search__error {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ff0000;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .search__form {
+    height: 56px;
+  }
+
+  .search__button {
+    height: 56px;
+    padding: 0 28px;
+    font-size: 16px;
+  }
+
+  .search__input {
+    font-size: 14px;
+    min-height: 56px;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 767px) {
+  .search {
+    padding: 24px 16px;
+    justify-content: flex-start;
+  }
+
+  .search__form {
+    flex-direction: column;
+    align-items: flex-start;
+
+    height: auto;
+    gap: 16px;
+
+    background: transparent;
+    overflow: visible;
+  }
+
+  .search__input {
+    width: 288px;
+    height: 56px;
+    padding: 0 16px;
+    font-size: 14px;
+
+    background-color: #ffffff;
+    border-radius: 100px;
+  }
+
+  .search__button {
+    width: 288px;
+    height: 56px;
+    padding: 0;
+
+    font-size: 16px;
+    border-radius: 100px;
+  }
 }

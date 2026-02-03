@@ -1,0 +1,106 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 54px;
+}
+
+.navigation__link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ACTIVE LINK (FIGMA 68x3 UNDERLINE) */
+.navigation__link_active {
+  position: relative;
+}
+
+.navigation__link_active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+
+  width: 68px;
+  height: 3px;
+
+  background-color: #ffffff;
+}
+
+/* SIGN IN BUTTON */
+.navigation__button {
+  width: 176px;
+  height: 48px;
+
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* LOGGED IN USER BUTTON */
+.navigation__user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  padding: 8px 16px;
+
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navigation__logout-container {
+  width: 24px;
+  height: 24px;
+}
+
+.navigation__logout-icon {
+  width: 17px;
+  height: 16px;
+  background-image: url("../../assets/logout.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* ===== SAVED ARTICLES PAGE (WHITE HEADER) ===== */
+
+.navigation_saved .navigation__link {
+  color: rgba(26, 27, 34, 1);
+}
+
+.navigation_saved .navigation__link_active::after {
+  background-color: rgba(26, 27, 34, 1);
+}
+
+.navigation_saved .navigation__user {
+  color: rgba(26, 27, 34, 1);
+  border-color: rgba(26, 27, 34, 1);
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .navigation {
+    gap: 32px; /* was 54px */
+  }
+
+  .navigation__button {
+    width: 152px;
+    height: 44px;
+    font-size: 15px;
+  }
+
+  .navigation__user {
+    padding: 6px 14px;
+    font-size: 15px;
+  }
+}

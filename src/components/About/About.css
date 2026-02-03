@@ -1,21 +1,73 @@
 .about {
-  padding: 60px 0;
+  background-color: #ffffff;
+  padding: 80px 104px;
   display: flex;
+  gap: 56px;
+  align-items: center;
+}
+
+/* GRAY CIRCLE */
+.about__avatar {
+  width: 232px;
+  height: 232px;
+  border-radius: 50%;
+  background-color: #d1d2d6;
+
+  display: flex;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+/* TEXT INSIDE CIRCLE */
+.about__avatar-text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  max-width: 160px;
 }
 
 .about__content {
-  max-width: 800px;
-  padding: 0 20px;
+  max-width: 600px;
 }
 
 .about__title {
-  font-size: 32px;
-  margin-bottom: 20px;
+  margin: 0 0 24px;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1a1b22;
 }
 
 .about__text {
+  margin: 0 0 16px;
   font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 16px;
+  line-height: 24px;
+  color: #1a1b22;
+}
+
+@media screen and (min-width: 1024px) {
+  .about__avatar {
+    width: 464px;
+    height: 464px;
+  }
+}
+
+/*  MOBILE */
+@media screen and (max-width: 480px) {
+  .about {
+    flex-direction: column;
+    padding: 32px 16px;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .about__avatar {
+    width: 128px;
+    height: 128px;
+  }
+
+  .about__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }

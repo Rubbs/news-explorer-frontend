@@ -3,6 +3,14 @@ import "./About.css";
 function About() {
   return (
     <section className="about">
+      <div className="about__avatar">
+        <span className="about__avatar-text">
+          Placeholder image.
+          <br />
+          put an image of yourself here.
+        </span>
+      </div>
+
       <div className="about__content">
         <h2 className="about__title">About This Project</h2>
 
