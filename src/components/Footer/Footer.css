@@ -1,0 +1,89 @@
+.footer {
+  background-color: #fff;
+  padding: 32px 104px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__text {
+  margin: 0;
+  font-size: 16px;
+  color: rgba(182, 188, 191, 1);
+}
+
+.footer__nav {
+  display: flex;
+  align-items: center;
+}
+
+/* TEXT LINKS */
+.footer__links {
+  text-decoration: none;
+  color: rgba(26, 27, 34, 1);
+  font-size: 18px;
+  display: flex;
+  gap: 40px; /* Home ↔ TripleTen */
+  margin-right: 40px; /* TripleTen ↔ GitHub */
+}
+
+/* ICONS */
+.footer__icons {
+  display: flex;
+  gap: 24px; /* GitHub ↔ LinkedIn */
+  color: rgba(26, 27, 34, 1);
+}
+
+.footer__icons img {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 24px 40px;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  /* NAV GOES FIRST */
+  .footer__nav {
+    order: 1;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  /* LINKS STACK */
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-right: 0;
+  }
+
+  /* ICONS STAY RIGHT */
+  .footer__icons {
+    display: flex;
+    gap: 16px;
+  }
+
+  /* TEXT GOES LAST */
+  .footer__text {
+    order: 2;
+    font-size: 14px;
+    margin-top: 8px;
+    color: rgba(182, 188, 191, 1);
+  }
+}
